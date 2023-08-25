@@ -1,2 +1,2 @@
-# SSASIT
- gtu practicals
+# GTU
+ gtu practicals solution
