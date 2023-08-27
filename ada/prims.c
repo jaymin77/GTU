@@ -1,9 +1,10 @@
 #include<stdio.h>
 void main()
 {
-	int g[10][10],i,j,n,s,k,min,cost=0,vi[10]={0},u,v,c=1;
+	int i,j,n,s,k,min,cost=0,vi[10]={0},u,v,c=1;
 	printf("Enter no. of nodes:");
 	scanf("%d",&n);
+	int g[n][n];
 	printf("Enter adjancy matrix:\n");
 	for(i=1;i<=n;i++)
 	{
@@ -15,7 +16,7 @@ void main()
 				g[i][j]=999;
 		}
 	}
-	min=999;
+	// min=999;
 
 	printf("Enter starting node:");
 	scanf("%d",&s);
@@ -25,17 +26,18 @@ void main()
 		min=999;
 		for(i=1;i<=n;i++)
 		{
-			if(vi[i]==1)
-			s=i;
-			for(j=1;j<=n;j++)
-			{
-				if(vi[j]==0)
+			if(vi[i]==1){
+				s=i;
+				for(j=1;j<=n;j++)
 				{
-					if(g[s][j]<min)
+					if(vi[j]==0)
 					{
-						min=g[s][j];
-						u=s;
-						v=j;
+						if(g[s][j]<min)
+						{
+							min=g[s][j];
+							u=s;
+							v=j;
+						}
 					}
 				}
 			}
