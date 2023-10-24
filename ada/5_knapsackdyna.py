@@ -26,6 +26,8 @@ for row in V:
 print("Maximum Value:", max_profit)
 
 
+
+
 # Find the selected items
 #     selected_items = []
 #     i, j = n, W
