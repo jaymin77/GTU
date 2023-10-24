@@ -1,9 +1,5 @@
 import time
 
-
-def print_array(A):
-    print(A)
-
 def partition(A, low, high):
     pivot = A[low]
     i = low + 1
@@ -29,12 +25,8 @@ def quick_sort(A, low, high):
         quick_sort(A, low, index - 1)
         quick_sort(A, index + 1, high)
 
-    
-
-
 A = [9,8,7,6,5,4,3]
 n = len(A)
-
 
 t = time.time()
 a = quick_sort(A, 0, n - 1)
