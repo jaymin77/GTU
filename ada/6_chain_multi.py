@@ -24,6 +24,20 @@ for row in M:
     print(row)
 
 print("S:")
-# Print S table
 for row in S:
     print(row)
+
+def print_optimal_sequence(S, i, j):
+    if i == j:
+        print(f"A{i}", end="")
+    else:
+        print("(", end="")
+        print_optimal_sequence(S, i, S[i][j])
+        print_optimal_sequence(S, S[i][j] + 1, j)
+        print(")", end="")
+
+print("Optimal Sequence:")
+print_optimal_sequence(S, 1, len(P) - 1)
+
+
+
