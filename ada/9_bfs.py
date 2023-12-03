@@ -5,6 +5,7 @@ def bfs(graph, root):
 
     while queue:
         vertex = queue.popleft()
+        print(queue)
         if vertex not in visited:
             visited.append(vertex)
         for i in graph[vertex]:
