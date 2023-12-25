@@ -14,18 +14,18 @@ def max_heapify(arr, n, i):
         max_heapify(arr, n, largest)
 
 def max_heap_tree(arr):
-    n = len(arr)
+
     for i in range(n // 2 - 1, -1, -1):
         max_heapify(arr, n, i)
 
 def heap_sort(arr):
     max_heap_tree(arr)
-    n = len(arr)
 
     for i in range(n - 1, 0, -1):
         arr[0], arr[i] = arr[i], arr[0]
         max_heapify(arr, i, 0)
 
 arr = [6, 5, 3, 1, 8, 7, 2, 4]
+n = len(arr)
 heap_sort(arr)
 print("Sorted array:", arr)

@@ -6,19 +6,19 @@ def knapsack(profit,weight,capacity):
     new = list(range(n))
     new.sort(key= lambda i: ratio[i],reverse=True)
     print("new:",new)
-    max_value = 0
+    max_profit = 0
     fractions = [0]*n
     for i in new:
         if weight[i] <= capacity:
-            max_value += profit[i]
+            max_profit += profit[i]
             capacity -= weight[i]
             fractions[i] = 1
         else:
             fractions[i] = capacity / weight[i]
-            max_value += profit[i]*fractions[i]  
+            max_profit += profit[i]*fractions[i]  
             break
     print("fractions:",fractions)
-    return max_value
+    return max_profit
 
 
 

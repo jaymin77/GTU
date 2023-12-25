@@ -1,24 +1,24 @@
 import time
-def binary(T, x):
+def binary(arr, x):
     i = 0
-    j = len(T)
+    j = len(arr)
     
     while i < j:
         k = (i + j) // 2  
         
-        if x == T[k]:
-            return k  
-        elif x < T[k]:
+        if x == arr[k]:
+            return k+1  
+        elif x < arr[k]:
             j = k
         else:
             i = k + 1
     return -1  
 
-T = [10, 20, 30, 40, 50]
-x = 20
+arr = [10, 20, 30, 40, 50]
+x = 60
 
 t = time.time()
-result = binary(T, x)
+result = binary(arr, x)
 s = time.time()
 
 if result != -1:
